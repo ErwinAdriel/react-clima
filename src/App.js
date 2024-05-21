@@ -4,7 +4,7 @@ import ClimaApp from './componentes/ClimaApp';
 function App() {
   return (
     <div className="App">
-      <ClimaApp></ClimaApp>
+      <ClimaApp/>
     </div>
   );
 }
