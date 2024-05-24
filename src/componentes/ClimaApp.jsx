@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ClimaForm from "./ClimaForm";
+import ClimaInfo from "./ClimaInfo";
 export default function ClimaApp(){
 
     const [weather, setWeather] = useState(null);
@@ -38,23 +39,7 @@ export default function ClimaApp(){
         <div>
             <h1>ClimaApp</h1>
             <ClimaForm onChangeCity={handleChangeCity} />
-            <div>
-                <div className="imgIcon">
-                    {weather?.current.condition.icon}
-                </div>
-                <div className="clima">
-                    {weather?.current.condition.text}
-                </div>
-                <div className="temperatura">
-                    {weather?.current.temp_c}
-                </div>
-                <div className="humedad">
-                    {weather?.current.humidity}
-                </div>
-                <div className="ciudadPais">
-                    {weather?.location.name}, {weather?.location.country}
-                </div>
-            </div>
+            <ClimaInfo weather={weather}/>
         </div>
     );
 }
