@@ -3,12 +3,12 @@ import { useState } from "react"
 export default function ClimaForm({onChangeCity})
 {
     
-    const [city, setCity] = useState('');
+    const [city, setCity] = useState("");
 
     function onChange(e){
         const value = e.target.value;
 
-        if(value !== ''){
+        if(value !== ""){
             setCity(value);
         }
     }
