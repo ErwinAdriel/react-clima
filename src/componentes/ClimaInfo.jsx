@@ -21,8 +21,18 @@ export default function ClimaInfo({weather}){
             <div className="ciudadPais">
                 {weather?.location.name}, {weather?.location.country}
             </div>
+            {/* despues de '.', contar 14 digitos */}
             <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317719.58789184963!2d-0.43123890713216667!3d51.528179774916985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondres%2C%20Reino%20Unido!5e0!3m2!1ses!2sar!4v1716743945099!5m2!1ses!2sar" title="mapa" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    title="mapa"
+                    src={`https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d866943.5593800024!2d${weather?.location.lon}77!3d${weather?.location.lat}!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1716766829918!5m2!1ses!2sar`} 
+                    width="600" 
+                    height="450" 
+                    style={{border:0}} 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     );
