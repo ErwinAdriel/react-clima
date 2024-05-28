@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ClimaForm from "./ClimaForm";
 import ClimaInfo from "./ClimaInfo";
+import styles from './ClimaApp.module.css';
+
 export default function ClimaApp(){
 
     const [weather, setWeather] = useState(null);
@@ -13,7 +15,7 @@ export default function ClimaApp(){
         document.title = `Clima App | ${weather?.location.name ?? ""}`;
     }, [weather]);
 
-    async function loadInfo(city = 'london'){
+    async function loadInfo(city = 'Buenos Aires'){
         try{
             const request = await fetch(
                 `http://api.weatherapi.com/v1/current.json?key=424f0d9dcd5b407da6b230051242105&q=${city}&aqi=no`
@@ -36,8 +38,7 @@ export default function ClimaApp(){
     }
 
     return(
-        <div>
-            <h1>ClimaApp</h1>
+        <div className={styles.appContainer}>
             <ClimaForm onChangeCity={handleChangeCity} />
             <ClimaInfo weather={weather}/>
         </div>

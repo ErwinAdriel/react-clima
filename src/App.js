@@ -1,5 +1,5 @@
-import './App.css';
 import ClimaApp from './componentes/ClimaApp';
+import './App.css';
 
 function App() {
   return (

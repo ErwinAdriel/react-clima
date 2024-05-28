@@ -1,0 +1,22 @@
+.formBuscador{
+    margin-bottom: 1rem;
+}
+.inputForm{
+    padding: 1rem;
+    width: 300px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: #038C8C;
+    border: 0;
+}
+
+.inputForm:focus{
+    border: none;
+    outline: none;
+}
+
+.inputForm::placeholder{
+    font-size: 1.1em;
+    color: #B3B3B3;
+}

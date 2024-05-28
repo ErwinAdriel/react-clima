@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import styles from './ClimaForm.module.css'
 export default function ClimaForm({onChangeCity})
 {
     
@@ -18,8 +18,12 @@ export default function ClimaForm({onChangeCity})
         onChangeCity(city);
     }
     return(
-        <form onSubmit={handleSubmit}>
-            <input type="text" onChange={onChange} />
-        </form>
+        <form className={styles.formBuscador} onSubmit={handleSubmit}>
+            <input 
+            placeholder="Ingresar ciudad/pais"
+            type="text" 
+            onChange={onChange} 
+            className={styles.inputForm}/>
+        </form>        
     )
 }
