@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ClimaForm from "./ClimaForm";
 import ClimaInfo from "./ClimaInfo";
 import styles from './ClimaApp.module.css';
+import Loading from "./Loading";
 
 export default function ClimaApp(){
 
@@ -25,7 +26,9 @@ export default function ClimaApp(){
 
             console.log(json);
 
-            setWeather(json);
+            setTimeout(() => {
+                setWeather(json);    
+            }, 2000);
 
         } catch (error) {
 
@@ -40,7 +43,8 @@ export default function ClimaApp(){
     return(
         <div className={styles.appContainer}>
             <ClimaForm onChangeCity={handleChangeCity} />
-            <ClimaInfo weather={weather}/>
+            {weather ? <ClimaInfo weather={weather}/> : <Loading/>}
+            
         </div>
     );
 }
