@@ -1,0 +1,39 @@
+.indexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15vh;
+}
+
+.imgIcon{
+    width: 50%;
+}
+
+.imgIcon img{
+    width: 100%;
+}
+
+.tituloIndex{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 400;
+    margin: 1rem;
+}
+
+.btnIngresar{
+    padding: 1rem;
+    width: 200px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: transparent;
+    border: solid 1px #000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btnIngresar:hover{
+    opacity: 0.4;
+    transition: 0.5s;
+}
